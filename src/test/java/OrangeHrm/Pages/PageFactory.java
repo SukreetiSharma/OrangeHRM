@@ -8,6 +8,7 @@ public class PageFactory {
     private PimPage pimPage;
     private Adduser addUser;
     private DeleteUser deleteUser;
+    private ApplyLeave applyLeave;
 
     public PageFactory(WebDriver driver) {
         this.driver = driver;
@@ -37,6 +38,12 @@ public class PageFactory {
             deleteUser = new DeleteUser(driver);
         }
         return deleteUser;
+    }
+    public ApplyLeave getApplyLeave() {
+        if(applyLeave == null){
+            applyLeave = new ApplyLeave(driver);
+        }
+        return applyLeave;
     }
  }
 
