@@ -1,14 +1,22 @@
 package OrangeHrm.Test;
 
-import static OrangeHrm.Test.BaseClass.setup;
+import org.testng.annotations.Test;
 
 public class TestLogin extends BaseClass {
-    public static void main(String args[]) throws InterruptedException{
-        setup();
+    @Test(priority = 1)
+    public void Login() throws InterruptedException{
         pageFactory.getLoginPage().login();
-        pageFactory.getLoginPage().admin();
-        pageFactory.getLoginPage().addUser();
-
     }
+    @Test(priority = 2)
+    public void AdminMenuClick() throws InterruptedException{
+        pageFactory.getPimPage().Clickadmin();
+    }
+    @Test(priority = 3)
+    public void AddUser() throws InterruptedException{
+        pageFactory.getAddUser().user();
+        pageFactory.getAddUser().verify();
+    }
+
+
 
 }

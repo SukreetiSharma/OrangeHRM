@@ -3,6 +3,9 @@ package OrangeHrm.Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage {
     WebDriver driver;
     By userName = By.xpath("//input[@name='username']");
@@ -17,14 +20,13 @@ public class LoginPage {
 
     public void login() throws InterruptedException{
         driver.manage().window().maximize();
-        Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(userName).sendKeys("Admin");
         driver.findElement(password).sendKeys("admin123");
         driver.findElement(Login).click();
+        Thread.sleep(5000);
     }
 
-    public void addUser(){
-        driver.findElement(Add).click();
-    }
+
 
 }
