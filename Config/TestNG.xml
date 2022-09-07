@@ -1,17 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Cases" verbose="1" >
-<!--    <test name="Verify user is added">-->
-<!--        <parameter name="testRunId" value="TCTC-1"/>-->
-<!--        <classes>-->
-<!--            <class name="OrangeHrm.Test.TestLogin"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Verify user is deleted">-->
-<!--        <parameter name="testRun" value="TCTC-2"/>-->
-<!--        <classes>-->
-<!--            <class name="OrangeHrm.Test.TestDeleteUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Verify user is added">
+        <parameter name="testRunId" value="TCTC-1"/>
+        <classes>
+            <class name="OrangeHrm.Test.TestLogin"/>
+        </classes>
+    </test>
+    <test name="Verify user is deleted">
+        <parameter name="testRun" value="TCTC-2"/>
+        <classes>
+            <class name="OrangeHrm.Test.TestDeleteUser"/>
+        </classes>
+    </test>
     <test name="Verify able to Apply leave">
         <parameter name="testRun" value="TCTC-3"/>
         <classes>

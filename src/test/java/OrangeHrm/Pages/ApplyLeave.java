@@ -29,8 +29,9 @@ public class ApplyLeave {
         driver.findElement(FromDate).sendKeys("2022-09-12");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.findElement(ApplyLeave).click();
+        Thread.sleep(20000);
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
 
     }
 }
