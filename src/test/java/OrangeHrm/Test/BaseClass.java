@@ -5,12 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import java.time.Duration;
-
 public class BaseClass {
     static WebDriver driver;
     protected static PageFactory pageFactory;
+
     @BeforeClass
     public static void setup(){
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
@@ -20,9 +19,9 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         pageFactory = new PageFactory(driver);
     }
+
     @AfterClass
     public void close(){
-
         driver.close();
     }
 }

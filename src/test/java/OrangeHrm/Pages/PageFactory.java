@@ -1,7 +1,6 @@
 package OrangeHrm.Pages;
 
 import org.openqa.selenium.WebDriver;
-
 public class PageFactory {
     WebDriver driver;
     private LoginPage loginPage;
@@ -9,10 +8,13 @@ public class PageFactory {
     private Adduser addUser;
     private DeleteUser deleteUser;
     private ApplyLeave applyLeave;
+    private GenerateLeaveReport myLeave;
 
-    public PageFactory(WebDriver driver) {
+    public PageFactory(WebDriver driver)
+            {
         this.driver = driver;
     }
+
     public LoginPage getLoginPage(){
         if(loginPage == null){
             loginPage = new LoginPage(driver);
@@ -33,17 +35,26 @@ public class PageFactory {
         }
         return addUser;
     }
+
     public DeleteUser getDeleteUser() {
         if(deleteUser == null){
             deleteUser = new DeleteUser(driver);
         }
         return deleteUser;
     }
+
     public ApplyLeave getApplyLeave() {
         if(applyLeave == null){
             applyLeave = new ApplyLeave(driver);
         }
         return applyLeave;
+    }
+
+    public GenerateLeaveReport getMyLeave() {
+        if(myLeave == null){
+            myLeave = new GenerateLeaveReport(driver);
+        }
+        return myLeave;
     }
  }
 
